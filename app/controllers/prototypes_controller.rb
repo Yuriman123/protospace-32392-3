@@ -25,13 +25,16 @@ class PrototypesController < ApplicationController
       @comments = @prototype.comments.includes(:user)
       end
     
-    def edit
-      @prototype = Prototype.find(params[:id])
-      unless user_signed_in?
-        redirect_to :index
-      end
-    end
+    # def edit
+    #   @prototype = Prototype.find(params[:id])
+    #   unless user_signed_in?
+    #     redirect_to :index
+    #   end
+    # end
 
+    def edit
+    end
+    
     def update
      if@prototype = Prototype.update(prototype_params)
       redirect_to prototype_path(@prototype)
