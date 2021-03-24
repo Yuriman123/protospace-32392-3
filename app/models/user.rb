@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validates :occupation, presence: true
   validates :position, presence: true
   validates :encrypted_password, presence: true, length: {minimum: 6}
+  validates :password_confirmation,presence: true
 
 
   has_many :prototypes
